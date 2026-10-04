@@ -21,6 +21,7 @@ const allowedOrigins = [
   "http://localhost:5500",
   "http://127.0.0.1:5500",
   "https://admin-kelas-rpl.pallalwayss.workers.dev",
+  "https://kelas-rpl-otm.pallalwayss.workers.dev",
 ];
 
 app.use(
