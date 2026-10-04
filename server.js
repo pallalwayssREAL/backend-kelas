@@ -18,12 +18,9 @@ app.use(cookieParser());
 // CORS — izinkan domain frontend
 // ============================================
 const allowedOrigins = [
-  "http://localhost:3000",
   "http://localhost:5500",
   "http://127.0.0.1:5500",
-  // Nanti tambahkan domain Cloudflare Pages kalau sudah deploy:
-  // "https://kelas-rpl-otm.pages.dev",
-  // "https://admin-kelas-rpl.pages.dev",
+  "https://admin-kelas-rpl.pages.dev",
 ];
 
 app.use(
