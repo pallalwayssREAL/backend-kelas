@@ -9,9 +9,6 @@ const db = new Database(dbPath);
 db.pragma("journal_mode = WAL");
 db.pragma("foreign_keys = ON");
 
-// ============================================
-// BUAT SEMUA TABEL
-// ============================================
 db.exec(`
   CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -64,6 +61,14 @@ db.exec(`
     tanggal TEXT NOT NULL,
     lokasi TEXT DEFAULT '',
     deskripsi TEXT DEFAULT ''
+  );
+
+  CREATE TABLE IF NOT EXISTS structure (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nama TEXT NOT NULL,
+    jabatan TEXT NOT NULL,
+    urutan INTEGER DEFAULT 0,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
   );
 
   INSERT OR IGNORE INTO class_info (id) VALUES (1);
