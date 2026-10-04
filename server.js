@@ -20,7 +20,7 @@ app.use(cookieParser());
 const allowedOrigins = [
   "http://localhost:5500",
   "http://127.0.0.1:5500",
-  "https://admin-kelas-rpl.pages.dev",
+  "https://admin-kelas-rpl.pallalwayss.workers.dev/",
 ];
 
 app.use(
